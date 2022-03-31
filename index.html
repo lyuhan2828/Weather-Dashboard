@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="" href="" />
-    <link rel="stylesheet" href="Assets/css/style.css" />
+    <link rel="stylesheet" href="./Assets/css/style.css" />
     <title>Weather Dashboard</title>
   </head>
   <body>
@@ -19,22 +19,27 @@
         <div class="col-3 pb-2 pt-3" id="searchResults">
           <div class="row">
             <div class="col-12">
-              <h4>Search for a City:</h4>
+              <h4>Search for a City</h4>
             </div>
           </div>
 
           <div class="row">
             <div class="col-12">
-              <div class="input-group">
+              <form id="searchForm" class="input-group">
                 <input
+                  for="searchForm"
                   class="form-control"
                   type="text"
                   id="enterCity"
                   placeholder="Enter city to view weather"
-                /><button type="button" id="searchBtn" class="btn btn-primary">
-                  <i class="fas fa-search"></i>
-                </button>
-              </div>
+                />
+                <button
+                  for="searchForm"
+                  type="submit"
+                  id="searchBtn"
+                  class="btn btn-primary"
+                ></button>
+              </form>
             </div>
           </div>
 
@@ -65,6 +70,6 @@
       </div>
     </div>
 
-    <script src=""></script>
+    <script src="./Assets/js/script.js"></script>
   </body>
 </html>
