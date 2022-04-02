@@ -26,16 +26,18 @@ function getWeather(lat, lon) {
       for (var i = 0; i < 5; i++) {
         fiveDayEl.innerHTML += `
   <div class="col current-info">
+  <div class="weather-item">
+  <img src="" alt="weather icon" class="w-icon">
               <div class="weather-item">
-                Temp
+                Temp (°C)
                 <p>${data.daily[i].temp.day - 273}</p>
               </div>
               <div class="weather-item">
-                Wind
+                Wind Speed (MPH)
                 <p>${data.daily[i].wind_speed}</p>
               </div>
               <div class="weather-item">
-                Humidity
+                Humidity (φ)
                 <p>${data.daily[i].humidity}</p>
               </div>
             </div>
