@@ -12,8 +12,15 @@ function getWeather(lat, lon) {
       return res.json();
     })
     .then(function (data) {
+      var temptext = document.getElementById("current-temp");
+      temptext.innerHTML = data.current.temp - 273;
+      var windtext = document.getElementById("current-wind");
+      windtext.innerHTML = data.current.weather.wind_speed;
+      var humidtext = document.getElementById("current-humid");
+      humidtext.innerHTML = data.current.humidity;
+      var UVtext = document.getElementById("current-UV");
+      UVtext.innerHTML = data.current.uvi;
       console.log(data);
-        
     });
 }
 

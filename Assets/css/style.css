@@ -1,0 +1,43 @@
+*{
+    box-sizing: border-box;
+    /* background-color: rgb(206, 211, 187); */
+}
+
+body {
+    background:url("https://apod.nasa.gov/apod/image/2204/Z62_5747-Edit1090.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    height: 100%;
+    font-family: 'Poppins', sans-serif;
+}
+
+.container-fluid {
+    padding: 20px 70px;
+    color: rgb(229, 240, 205);
+}
+
+.current-info {
+    background-color: rgb(81, 86, 128);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px 0;
+    flex-direction: column;
+    display: flex;
+}
+
+.weather-item {
+    color: aqua;
+}
+
+.fiveDay .card-list{
+    background: rgb(79, 91, 199);
+    justify-content: center;
+    padding: 25px;
+    align-items: center;
+    position: fixed;
+    display: flex;
+    color: rgb(142, 235, 235);
+    width: 100%;
+
+}
