@@ -4,6 +4,7 @@ var weatherApiKey = "fbe3e7f9934a462c71d1d1f7db8c90ed";
 var searchBtnEl = document.getElementById("searchBtn");
 var searchInputEl = document.getElementById("enterCity");
 var searchFormEl = document.getElementById("searchForm");
+var fiveDayEl = document.getElementById("fiveDay");
 
 function getWeather(lat, lon) {
   var weatherUrl = `${weatherApiRoot}onecall?lat=${lat}&lon=${lon}&appid=${weatherApiKey}`;
@@ -15,12 +16,31 @@ function getWeather(lat, lon) {
       var temptext = document.getElementById("current-temp");
       temptext.innerHTML = data.current.temp - 273;
       var windtext = document.getElementById("current-wind");
-      windtext.innerHTML = data.current.weather.wind_speed;
+      windtext.innerHTML = data.current.wind_speed;
       var humidtext = document.getElementById("current-humid");
       humidtext.innerHTML = data.current.humidity;
       var UVtext = document.getElementById("current-UV");
       UVtext.innerHTML = data.current.uvi;
       console.log(data);
+
+      for (var i = 0; i < 5; i++) {
+        fiveDayEl.innerHTML += `
+  <div class="col current-info">
+              <div class="weather-item">
+                Temp
+                <p>${data.daily[i].temp.day - 273}</p>
+              </div>
+              <div class="weather-item">
+                Wind
+                <p>${data.daily[i].wind_speed}</p>
+              </div>
+              <div class="weather-item">
+                Humidity
+                <p>${data.daily[i].humidity}</p>
+              </div>
+            </div>
+  `;
+      }
     });
 }
 

@@ -7,7 +7,6 @@ body {
     background:url("https://apod.nasa.gov/apod/image/2204/Z62_5747-Edit1090.jpg");
     background-repeat: no-repeat;
     background-size: cover;
-    overflow: hidden;
     height: 100%;
     font-family: 'Poppins', sans-serif;
 }
@@ -26,6 +25,9 @@ body {
     display: flex;
 }
 
+.fiveDay {
+border-radius: 10px;
+}
 .weather-item {
     color: aqua;
 }
