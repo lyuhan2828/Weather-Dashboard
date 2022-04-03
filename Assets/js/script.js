@@ -26,8 +26,8 @@ function getWeather(lat, lon) {
       for (var i = 0; i < 5; i++) {
         fiveDayEl.innerHTML += `
   <div class="col current-info">
-  <div class="weather-item">
-  <img src="" alt="weather icon" class="w-icon">
+  <div class="weather-item day">
+  <img src="http://openweathermap.org/img/wn/10d@2x.png" alt="weather icon" class="w-icon">
               <div class="weather-item">
                 Temp (°C)
                 <p>${data.daily[i].temp.day - 273}</p>

@@ -43,3 +43,9 @@ border-radius: 10px;
     width: 100%;
 
 }
+
+.weather-item .w-icon{
+    padding: 5px 15px;
+    background: #537597;
+    text-align: center;
+}
